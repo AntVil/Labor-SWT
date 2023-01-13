@@ -7,15 +7,17 @@ public class System {
 	private static Notification notification;
 	private static Log log;
 	
-	public enum PressureState {
-		CRITICALLY_LOW, LOW, OPTIMAL, HIGH, CRITICALLY_HIGH, DANGEROUSLY_HIGH
+	private enum PressureState {
+		INITIAL, CRITICALLY_LOW, LOW, OPTIMAL, HIGH, CRITICALLY_HIGH, DANGEROUSLY_HIGH
 	}
-	private PressureState pressureState = PressureState.OPTIMAL;
+	private PressureState pressureState;
 	
 	public System() {
 		alarm = new Alarm();
 		notification = new Notification(); 
 		log = new Log();
+		
+		pressureState = PressureState.INITIAL;
 	}
 	
 	public void evaluatePressure(float pressure) {

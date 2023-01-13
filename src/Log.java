@@ -6,6 +6,6 @@ public class Log{
     public String writeLog(String log){
         // Send to REST-API
         // if OK => Return Written
-        return "Works";
+    	return "log send successfully";
     }
 }

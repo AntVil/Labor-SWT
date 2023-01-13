@@ -3,9 +3,11 @@ public class System {
 	private float currentSensorVoltage;
 	private float currentValveStatus;
 	
-	private static Alarm alarm;
-	private static Notification notification;
-	private static Log log;
+	private PressureSensor pressureSensor;
+	private PressureValve pressureValve;
+	private Alarm alarm;
+	private Notification notification;
+	private Log log;
 	
 	private enum PressureState {
 		INITIAL, CRITICALLY_LOW, LOW, OPTIMAL, HIGH, CRITICALLY_HIGH, DANGEROUSLY_HIGH
@@ -13,11 +15,19 @@ public class System {
 	private PressureState pressureState;
 	
 	public System() {
+		pressureSensor = new PressureSensor();
+		pressureValve = new PressureValve();
 		alarm = new Alarm();
 		notification = new Notification(); 
 		log = new Log();
 		
 		pressureState = PressureState.INITIAL;
+	}
+	
+	public void updateIteration() {
+		currentPressure = pressureSensor.readPressure();
+		currentSensorVoltage = pressureSensor.readVoltage();
+		currentValveStatus = pressureValve.readStatus();
 	}
 	
 	public void evaluatePressure(float pressure) {
@@ -89,5 +99,13 @@ public class System {
 	
 	public Log getLog() {
 		return log;
+	}
+
+	public PressureValve getPressureValve() {
+		return pressureValve;
+	}
+
+	public PressureSensor getPressureSensor() {
+		return pressureSensor;
 	}
 }

@@ -1,34 +1,48 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.concurrent.TimeUnit;
-
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
 
 public class BluetoothInterfaceTest {
 	
-	
 	@Test
 	void getDisplayedPressureTest() {
-		BluetoothInterface bluetoothinterface = new BluetoothInterface();
-		System system = new System();
-		assertEquals(bluetoothinterface.getDisplayedPressure(), system.getCurrentPressure());
+		BluetoothInterface bluetoothInterface = new BluetoothInterface();
+		System system = bluetoothInterface.getSystem();
+		PressureSensor pressureSensor = system.getPressureSensor();
 		
+		bluetoothInterface.updateIteration();
+		
+		assertEquals(
+			bluetoothInterface.getDisplayedPressure(),
+			pressureSensor.readPressure()
+		);
 	}
 	
 	@Test
 	void getDisplayedSensorVoltageTest() {
-		BluetoothInterface bluetoothinterface = new BluetoothInterface();
-		System system = new System();
-		assertEquals(bluetoothinterface.getDisplayedSensorVoltage(), system.getCurrentSensorVoltage());
+		BluetoothInterface bluetoothInterface = new BluetoothInterface();
+		System system = bluetoothInterface.getSystem();
+		PressureSensor pressureSensor= system.getPressureSensor();
 		
+		bluetoothInterface.updateIteration();
+		
+		assertEquals(
+			bluetoothInterface.getDisplayedSensorVoltage(),
+			pressureSensor.readVoltage()
+		);
 	}
 	
 	@Test
 	void getDisplayedValveStatusTest() {
-		BluetoothInterface bluetoothinterface = new BluetoothInterface();
-		System system = new System();
-		assertEquals(bluetoothinterface.getDisplayedValveStatus(), system.getCurrentValveStatus());
+		BluetoothInterface bluetoothInterface = new BluetoothInterface();
+		System system = bluetoothInterface.getSystem();
+		PressureValve pressureValve = system.getPressureValve();
 		
+		bluetoothInterface.updateIteration();
+		
+		assertEquals(
+			bluetoothInterface.getDisplayedValveStatus(),
+			pressureValve.readStatus()
+		);
 	}
 }

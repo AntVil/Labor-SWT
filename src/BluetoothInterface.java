@@ -2,17 +2,18 @@ public class BluetoothInterface {
     private float displayedPressure;
     private float displayedSensorVoltage;
     private float displayedValveStatus;
-
-    public float getCurrentPressure(){
-        return 1.0f;
+    private System system = new System();
+    
+    public void setDisplayedPressure() {
+    	displayedPressure = system.getCurrentPressure();
     }
-
-    public float getCurrentSensorVoltage(){
-        return 1.0f;
+    
+    public void setDisplayedSensorVoltage() {
+    	displayedPressure = system.getCurrentSensorVoltage();
     }
-
-    public float getCurrentValveStatus(){
-        return 1.0f;
+    
+    public void setDisplayedValveStatus() {
+    	displayedPressure = system.getCurrentValveStatus();
     }
 
     public float getDisplayedPressure(){

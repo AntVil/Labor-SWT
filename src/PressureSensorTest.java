@@ -20,7 +20,7 @@ public class PressureSensorTest {
 	
 	@Test
 	@DisplayName("pressure pre 50")
-	//@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
+	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
 	void readPressureTest_CRITICALLY_LOW() {
 		pressure.setPressure(CRITICALLY_LOW);
 		assertEquals(pressuresensor.readPressure(), pressure.getPressure());

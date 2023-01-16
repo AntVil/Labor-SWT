@@ -12,5 +12,4 @@ public class NotificationTest {
         
         assertEquals(response, "message send successfully");
     }
-
 }

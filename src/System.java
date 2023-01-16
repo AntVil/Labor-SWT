@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class System {
 	private float currentPressure;
 	private float currentSensorVoltage;
@@ -62,17 +64,17 @@ public class System {
 			pressureState = nextPressureState;
 
 			if(pressureState == PressureState.CRITICALLY_LOW) {
-				log.writeLog("critically low pressure of " + pressure);
+				log.writeLog("critically low pressure of " + String.format(Locale.US, "%.1f", pressure));
 			}else if(pressureState == PressureState.LOW) {
-				log.writeLog("low pressure of " + pressure);
+				log.writeLog("low pressure of " + String.format(Locale.US, "%.1f", pressure));
 			}else if(pressureState == PressureState.OPTIMAL) {
-				log.writeLog("optimal pressure of " + pressure);
+				log.writeLog("optimal pressure of " + String.format(Locale.US, "%.1f", pressure));
 			}else if(pressureState == PressureState.HIGH) {
-				log.writeLog("high pressure of " + pressure);
+				log.writeLog("high pressure of " + String.format(Locale.US, "%.1f", pressure));
 			}else if(pressureState == PressureState.CRITICALLY_HIGH) {
-				log.writeLog("critically high pressure of " + pressure);
+				log.writeLog("critically high pressure of " + String.format(Locale.US, "%.1f", pressure));
 			}else if(pressureState == PressureState.DANGEROUSLY_HIGH) {
-				log.writeLog("dangerously high pressure of " + pressure);
+				log.writeLog("dangerously high pressure of " + String.format(Locale.US, "%.1f", pressure));
 			}
 		}
 	}

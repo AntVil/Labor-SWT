@@ -11,7 +11,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure pre 50 (alarm)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest1(){
+	void evaluatePressureTestPre50Alarm(){
 		System system = new System();
 		system.evaluatePressure(49.9f);
 		
@@ -24,7 +24,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure pre 50 (notification)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest2(){
+	void evaluatePressureTestPre50Notification(){
 		System system = new System();
 		system.evaluatePressure(49.9f);
 		
@@ -37,7 +37,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure pre 50 (log)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest3(){
+	void evaluatePressureTestPre50Log(){
 		System system = new System();
 		system.evaluatePressure(49.9f);
 		
@@ -49,7 +49,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 50 (alarm)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest4(){
+	void evaluatePressureTestAt50Alarm(){
 		System system = new System();
 		system.evaluatePressure(50.0f);
 		
@@ -62,7 +62,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 50 (notification)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest5(){
+	void evaluatePressureTestAt50Notification(){
 		System system = new System();
 		system.evaluatePressure(50.0f);
 		
@@ -75,7 +75,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 50 (log)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest6(){
+	void evaluatePressureTestAt50Log(){
 		System system = new System();
 		system.evaluatePressure(50.0f);
 		
@@ -87,7 +87,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 180 (alarm)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest7(){
+	void evaluatePressureTestAt180Alarm(){
 		System system = new System();
 		system.evaluatePressure(180.0f);
 		
@@ -100,7 +100,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 180")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest8(){
+	void evaluatePressureTestAt180Notification(){
 		System system = new System();
 		system.evaluatePressure(180.0f);
 		
@@ -113,7 +113,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 180 (log)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest9(){
+	void evaluatePressureTestAt180Log(){
 		System system = new System();
 		system.evaluatePressure(180.0f);
 		
@@ -125,7 +125,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure post 180 (alarm)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest10(){
+	void evaluatePressureTestPost180Alarm(){
 		System system = new System();
 		system.evaluatePressure(180.1f);
 		
@@ -138,7 +138,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure post 180 (notification)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest11(){
+	void evaluatePressureTestPost180Notification(){
 		System system = new System();
 		system.evaluatePressure(180.1f);
 		
@@ -151,7 +151,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure post 180 (log)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest12(){
+	void evaluatePressureTestPost180Log(){
 		System system = new System();
 		system.evaluatePressure(180.1f);
 		
@@ -163,7 +163,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure pre 220 (alarm)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest13(){
+	void evaluatePressureTestPre200Alarm(){
 		System system = new System();
 		system.evaluatePressure(219.9f);
 		
@@ -176,7 +176,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure pre 220 (notification)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest14(){
+	void evaluatePressureTestPre200Notification(){
 		System system = new System();
 		system.evaluatePressure(219.9f);
 		
@@ -189,7 +189,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure pre 220 (log)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest15(){
+	void evaluatePressureTestPre200Log(){
 		System system = new System();
 		system.evaluatePressure(219.9f);
 		
@@ -201,7 +201,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 220 (alarm)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest16(){
+	void evaluatePressureTestAt220Alarm(){
 		System system = new System();
 		system.evaluatePressure(220.0f);
 		
@@ -214,7 +214,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 220 (notification)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest17(){
+	void evaluatePressureTestAt220Notification(){
 		System system = new System();
 		system.evaluatePressure(220.0f);
 		
@@ -227,7 +227,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 220 (log)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest18(){
+	void evaluatePressureTestAt220Log(){
 		System system = new System();
 		system.evaluatePressure(220.0f);
 		
@@ -239,7 +239,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 300 (alarm)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest19(){
+	void evaluatePressureTestAt300Alarm(){
 		System system = new System();
 		system.evaluatePressure(300.0f);
 		
@@ -252,7 +252,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 300 (notification)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest20(){
+	void evaluatePressureTestAt300Notification(){
 		System system = new System();
 		system.evaluatePressure(300.0f);
 		
@@ -265,7 +265,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 300 (log)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest21(){
+	void evaluatePressureTestAt300Log(){
 		System system = new System();
 		system.evaluatePressure(300.0f);
 		
@@ -277,7 +277,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure post 300 (alarm)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest22(){
+	void evaluatePressureTestPost300Alarm(){
 		System system = new System();
 		system.evaluatePressure(300.1f);
 		
@@ -290,7 +290,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure post 300 (notification)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest23(){
+	void evaluatePressureTestPost300Notification(){
 		System system = new System();
 		system.evaluatePressure(300.1f);
 		
@@ -303,7 +303,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure post 300 (log)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest24(){
+	void evaluatePressureTestPost300Log(){
 		System system = new System();
 		system.evaluatePressure(300.1f);
 		
@@ -315,7 +315,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 500 (alarm)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest25(){
+	void evaluatePressureTestAt500Alarm(){
 		System system = new System();
 		system.evaluatePressure(500.0f);
 		
@@ -328,7 +328,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 500 (notification)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest26(){
+	void evaluatePressureTestAt500Notification(){
 		System system = new System();
 		system.evaluatePressure(500.0f);
 		
@@ -341,7 +341,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure at 500 (log)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest27(){
+	void evaluatePressureTestAt500Log(){
 		System system = new System();
 		system.evaluatePressure(500.0f);
 		
@@ -353,7 +353,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure post 500 (alarm)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest28(){
+	void evaluatePressureTestPost500Alarm(){
 		System system = new System();
 		system.evaluatePressure(500.1f);
 		
@@ -366,7 +366,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure post 500 (notification)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest29(){
+	void evaluatePressureTestPost500Notification(){
 		System system = new System();
 		system.evaluatePressure(500.1f);
 		
@@ -379,7 +379,7 @@ public class SystemTest {
 	@Test
 	@DisplayName("pressure post 500 (log)")
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
-	void evaluatePressureTest30(){
+	void evaluatePressureTestPost500Log(){
 		System system = new System();
 		system.evaluatePressure(500.1f);
 		

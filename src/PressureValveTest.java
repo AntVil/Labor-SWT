@@ -18,17 +18,23 @@ public class PressureValveTest {
         valve.close();
     }
 
+    /**
+     * Tests whether the valve can be opened
+     */
     @Test
     void openValveTest(){
-        assertEquals(valve.isOpen(),true);
-        assertEquals(valve.readStatus(),1.0f);
+        assertEquals(valve.isOpen(), true);
+        assertEquals(valve.readStatus(), 1.0f);
     }
 
+    /**
+     * Tests whether the valve can be closed
+     */
     @Test
     void closeValveTest(){
         valve.close();
-        assertEquals(valve.isOpen(),false);
-        assertEquals(valve.readStatus(),0.0f);
+        assertEquals(valve.isOpen(), false);
+        assertEquals(valve.readStatus(), 0.0f);
     }
 
 }

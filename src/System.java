@@ -16,6 +16,9 @@ public class System {
 	}
 	private PressureState pressureState;
 	
+	/**
+	 * Constructor of a class for handling the connections between components
+	 */
 	public System() {
 		pressureSensor = new PressureSensor();
 		pressureValve = new PressureValve();
@@ -26,13 +29,21 @@ public class System {
 		pressureState = PressureState.INITIAL;
 	}
 	
+	/**
+     * A single update iteration in the system
+     */
 	public void updateIteration() {
 		currentPressure = pressureSensor.readPressure();
 		currentSensorVoltage = pressureSensor.readVoltage();
 		currentValveStatus = pressureValve.readStatus();
 	}
 	
+	/**
+	 * Sends the required notifications/signals/logs for a specified pressure
+	 * @param pressure to evaluate
+	 */
 	public void evaluatePressure(float pressure) {
+		// evaluation
 		PressureState nextPressureState;
 		if(pressure < 50.0f) {
 			alarm.playSignal();
@@ -60,6 +71,7 @@ public class System {
 			}
 		}
 		
+		// logging
 		if(pressureState != nextPressureState) {
 			pressureState = nextPressureState;
 
@@ -79,34 +91,66 @@ public class System {
 		}
 	}
 	
+	/**
+	 * Getter for currentPressure
+	 * @return current pressure
+	 */
 	public float getCurrentPressure() {
 		return currentPressure;
 	}
 
+	/**
+	 * Getter for currentSensorVoltage
+	 * @return current Sensor Voltage
+	 */
 	public float getCurrentSensorVoltage() {
 		return currentSensorVoltage;
 	}
 	
+	/**
+	 * Getter for currentValveStatus
+	 * @return current Valve Status
+	 */
 	public float getCurrentValveStatus() {
 		return currentValveStatus;
 	}
 	
+	/**
+	 * Getter for alarm
+	 * @return the underlying alarm component
+	 */
 	public Alarm getAlarm() {
 		return alarm;
 	}
 	
+	/**
+	 * Getter for notification
+	 * @return the underlying notification component
+	 */
 	public Notification getNotification() {
 		return notification;
 	}
 	
+	/**
+	 * Getter for log
+	 * @return the underlying log component
+	 */
 	public Log getLog() {
 		return log;
 	}
 
+	/**
+	 * Getter for pressureValve
+	 * @return the underlying pressure valve component
+	 */
 	public PressureValve getPressureValve() {
 		return pressureValve;
 	}
 
+	/**
+	 * Getter for pressureSensor
+	 * @return the underlying pressure sensor component
+	 */
 	public PressureSensor getPressureSensor() {
 		return pressureSensor;
 	}

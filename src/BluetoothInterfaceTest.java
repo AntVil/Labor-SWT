@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 
 public class BluetoothInterfaceTest {
 	
+	/**
+	 * Test whether displayed pressure is the same as read pressure
+	 */
 	@Test
 	void getDisplayedPressureTest() {
 		BluetoothInterface bluetoothInterface = new BluetoothInterface();
@@ -18,6 +21,9 @@ public class BluetoothInterfaceTest {
 		);
 	}
 	
+	/**
+	 * Test whether displayed sensor voltage is the same as read sensor voltage
+	 */
 	@Test
 	void getDisplayedSensorVoltageTest() {
 		BluetoothInterface bluetoothInterface = new BluetoothInterface();
@@ -32,6 +38,9 @@ public class BluetoothInterfaceTest {
 		);
 	}
 	
+	/**
+	 * Test whether displayed valve open status is the same as read valve open status
+	 */
 	@Test
 	void getDisplayedValveStatusTest() {
 		BluetoothInterface bluetoothInterface = new BluetoothInterface();

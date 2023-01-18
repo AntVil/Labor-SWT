@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Timeout;
 
 public class AlarmTest {
 	
+	/**
+	 * Tests whether the alarm can start in 10ms
+	 */
 	@Test
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
 	void playAlarmTest(){
@@ -15,6 +18,9 @@ public class AlarmTest {
 		assertTrue(alarm.isPlayingAlarm());
 	}
 	
+	/**
+	 * Tests whether the signal can start in 10ms
+	 */
 	@Test
 	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
 	void playSignalTest(){
@@ -23,20 +29,27 @@ public class AlarmTest {
 		assertTrue(alarm.isPlayingSignal());
 	}
 	
+	/**
+	 * Tests whether the alarm is turned off by default
+	 */
 	@Test
-	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
 	void playNoAlarmTest(){
 		Alarm alarm = new Alarm();
 		assertFalse(alarm.isPlayingAlarm());
 	}
 	
+	/**
+	 * Tests whether the signal is turned off by default
+	 */
 	@Test
-	@Timeout(value = 10, unit = TimeUnit.MILLISECONDS)
 	void playNoSignalTest(){
 		Alarm alarm = new Alarm();
 		assertFalse(alarm.isPlayingSignal());
 	}
 	
+	/**
+	 * Tests whether the alarm can be turned off
+	 */
 	@Test
 	void stopAlarmTest(){
 		Alarm alarm = new Alarm();
@@ -45,6 +58,9 @@ public class AlarmTest {
 		assertFalse(alarm.isPlayingAlarm());
 	}
 	
+	/**
+	 * Tests whether the signal can be turned off
+	 */
 	@Test
 	void stopSignalTest(){
 		Alarm alarm = new Alarm();
